@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.etCostOfService.setOnKeyListener(View.OnKeyListener { view, i, _ -> handleKeyEvent(view, i) })
+        binding.etCostOfService.setOnKeyListener(View.OnKeyListener { view, i, _ ->
+            handleKeyEvent(view, i) })
     }
 
     fun btCalculateOnClick(view: View) {
