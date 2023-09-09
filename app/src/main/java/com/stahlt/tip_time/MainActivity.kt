@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.tvTip.text = getString(R.string.tip_result,
+            NumberFormat.getCurrencyInstance().format(0))
         binding.etCostOfService.setOnKeyListener(View.OnKeyListener { view, i, _ ->
             handleKeyEvent(view, i) })
     }
