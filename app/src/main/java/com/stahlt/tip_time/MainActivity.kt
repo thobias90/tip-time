@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
 
     fun btCalculateOnClick(view: View) {
         val stringInTextField = binding.etCostOfService.text.toString()
-        if (stringInTextField == "") {
+        if (stringInTextField.isEmpty()) {
+            binding.etCostOfService.error = "Cost of Service Must be Filled"
             return
         }
         val cost = stringInTextField.toDouble()
